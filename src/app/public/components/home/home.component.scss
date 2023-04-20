@@ -1,0 +1,45 @@
+
+  
+.centered-image {
+    position: absolute;
+    top: 60%;
+    right: 0;
+    transform: translate( 0%, -50%);
+    width: 68vw;
+  }
+
+  .background {
+    width: 100%;
+    position: relative;
+  }
+  
+  .background::before,
+  .background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    opacity: 0;
+  }
+  .background::before {
+    left: 0;
+    background-color: #FFD237; /* Set the color of the left half of the background */
+    animation: fadeInLeft 1s ease forwards; /* Apply the fade-in animation */
+    box-shadow: 32px 0px 18px rgba(255, 210, 55, .2);
+
+  }
+  
+  
+  /* Define the fade-in animation */
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-20%);
+    }
+  }
+  

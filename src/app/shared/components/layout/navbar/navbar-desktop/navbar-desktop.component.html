@@ -1,0 +1,13 @@
+<mat-toolbar>
+    <span>Mobility Manager</span>
+    <span class="flex-auto"></span>
+    <button  (click)="logout()" *ngIf="auth.isAuthenticated$ | async else unAuthorized" mat-raised-button class="example-icon" aria-label="Example icon-button with share icon">
+        logout
+    </button>
+    <ng-template #unAuthorized>
+        <button (click)="login()" mat-raised-button class="example-icon" aria-label="Example icon-button with share icon">
+            login
+        </button>
+    </ng-template>
+</mat-toolbar>
+

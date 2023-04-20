@@ -1,0 +1,28 @@
+<app-navbar-desktop></app-navbar-desktop>
+<div class="flex h-full">
+    <div class="flex-grow flex items-center justify-center">
+        <mat-card class="w-3/12 p-4 rounded-md shadow-lg flex" style="min-height: 600px;">
+            <img mat-card-image src="/assets/images/home/cloudkasten_logo_black-207x92.png" style="width: 200px; align-self: center;" alt="Your Image">
+            <p></p>
+            <p></p>
+            <h1 class="text-4xl text-center">Onboarding</h1>
+            <mat-card-content>
+                <form [formGroup]="onboardingForm" class="flex flex-col">
+                    <mat-form-field appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput formControlName="firstName" placeholder="First Name">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput formControlName="lastName" placeholder="Last Name">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email" placeholder="Email">
+                    </mat-form-field>
+                </form>
+                <button mat-raised-button class="w-full goldButton"  (click)="onboardingFormSubmit()">finish Onboarding</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
